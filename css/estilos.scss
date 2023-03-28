@@ -1,0 +1,81 @@
+@import './mixins.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+        margin-bottom: 10px;
+        border-bottom: 2px solid orange;
+    }
+
+    @include tablet {
+        h1 {
+            border-bottom: 3px solid rgb(0, 204, 255);
+        }
+    }
+    @include mobile {
+        h1 {
+            border-bottom: 4px solid rgb(29, 92, 41);
+        }
+    }
+}
+
+/*# sourceMappingURL=estilos.css.map */
+.images {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 5px;
+    article {
+        padding: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 3px solid black;
+
+        h3 {
+            padding: 10px 0px;
+        }
+        
+        img {
+            align-items: center;
+            margin-bottom: 15px;
+            width: 100;
+            border-radius: 15px;
+        }
+    }
+
+    @include tablet {
+        width: 100%;
+        grid-template-columns: 50% 50%;
+
+        article {
+            margin-bottom: 15px;
+        border-bottom: 5px solid blue;
+        }
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+
+        article {
+            img {
+
+                width: 100%;
+            }
+        }
+
+     }
+
+}
